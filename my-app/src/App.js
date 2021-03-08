@@ -2,32 +2,40 @@ import React, { useState } from 'react';
 import Header from "./components/Header"
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
-import Tweet from './Tweet';
 import TodoItem from './components/TodoItem';
+import ContactCard from './components/ContactCard';
+import "./App.css";
 
 function App() {
-  const [users, setUsers] = useState([
-    { name: "Janjira", message: "Sover" },
-    { name: "Joakim", message: "Puttar" },
-    { name: "Benjamin", message: "Godis" },
-    { name: "Bambu", message: "Vov Vov" },
-  ]);
+
 
 
   return (
-    
-    <div className="app">
-      <Header/>
-      <MainContent/>
-      <Footer/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      {users.map(user => (
-        <Tweet name={user.name} message={user.message} />
-      ))}
-    </div>
 
+    <div className="app">
+      <Header />
+      <MainContent />
+      <Footer />
+      <TodoItem />
+      <TodoItem />
+      <ContactCard
+        contact={{
+          name: "Mr.Whiskerson",
+          imgUrl: "http://placekitten.com/300/200",
+          phone: "(46) 555-61482",
+          email: "kitty@hotmail.com"
+        }}
+      />
+
+      <ContactCard
+        contact={{
+          name: "Mr. Fluffykins",
+          imgUrl: "http://placekitten.com/300/300",
+          phone: "(46) 515-61482",
+          email: "kitty@gmail.com"
+        }}
+      />
+    </div>
   );
 }
 

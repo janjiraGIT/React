@@ -8,9 +8,11 @@
 }
 
 .header {
-  background-color:yellowgreen;
-  color:black;
+  background-color:black;
+  color:whitesmoke;
   text-align: center;
+  width: 100%;
+  height: 50px;
 }
 .main {
   background-color:greenyellow;
@@ -27,18 +29,6 @@
   text-align: center;
   justify-content: space-around;
   display: flex;
-  align-items: center;
-}
-
-
-.tweet {
-  height: 300px;
-  width: 300px;
-  background-color: gray;
-  border-radius: 30px;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -63,5 +53,10 @@
   font-weight: 100;
   font-size: 15px;
   color: blue;
+}
+
+.contact-card{
+  height: 500px;
+  width: 300px;
 
 }
