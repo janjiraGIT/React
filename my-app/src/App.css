@@ -1,25 +1,48 @@
 .app {
   min-height: 100vh;
   background-color: lightblue;
-  display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
+.header {
+  background-color:yellowgreen;
+  color:black;
+  text-align: center;
+}
+.main {
+  background-color:greenyellow;
+  color: rgb(5, 4, 1);
+  text-align: center;
+}
+
+.footer {
+  background-color: rgb(51, 194, 38);
+  color: rgb(5, 4, 1);
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+
 .tweet {
   height: 300px;
   width: 300px;
-  background-color: white;
+  background-color: gray;
   border-radius: 30px;
+  justify-content: space-around;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 
 .red{
   color: red;
   font-size: 50px;
+}
 
-
+.button{
+  background-color: hotpink;
+  display: inline-block;
 }
