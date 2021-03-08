@@ -1,8 +1,10 @@
+
 .app {
   min-height: 100vh;
   background-color: lightblue;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 .header {
@@ -14,6 +16,9 @@
   background-color:greenyellow;
   color: rgb(5, 4, 1);
   text-align: center;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
 }
 
 .footer {
@@ -45,4 +50,18 @@
 .button{
   background-color: hotpink;
   display: inline-block;
+}
+
+.todo-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px 0;
+  width: 70%;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color: blue;
+
 }
