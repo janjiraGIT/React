@@ -12,6 +12,18 @@ import TodoItem from './componentsTodo/TodoItem';
 import "./App.css";
 
 class App extends React.Component {
+  // state can be change, props not able to change
+  // Add constructor method initialize value
+  // Add super()
+  // Add this.state
+  constructor() {
+    super()
+    this.state = {
+      name: "Janjira",
+      age: 40
+    }
+  }
+
   render() {
     const jokeComponents = jokesData.map(joke => {
       return (
@@ -31,6 +43,8 @@ class App extends React.Component {
         {todoItems}
         {jokeComponents}
         {productComponents}
+        <h1>{this.state.name}</h1>
+        <h1>{this.state.age}</h1>
         <ContactCard
           contact={{
             name: "Mr.Whiskerson",
@@ -51,7 +65,6 @@ class App extends React.Component {
     );
   }
 }
-
 
 
 export default App;
