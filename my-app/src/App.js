@@ -4,11 +4,25 @@ import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 import TodoItem from './components/TodoItem';
 import ContactCard from './components/ContactCard';
+import jokesData from "./components/jokesData"
+import Joke from "./components/Joke"
 import "./App.css";
+
+import Product from "./components/Product"
+import productsList from "./components/productList"
 
 function App() {
 
+  const jokeComponents = jokesData.map(joke => {
+    return (
+      <Joke 
+      question={joke.question} 
+      punchLine={joke.punchLine} 
+      />
+    )
+  })
 
+  const productComponents = productsList.map(item =>  <Product key={item.id} product={item} /> )
 
   return (
 
@@ -18,6 +32,8 @@ function App() {
       <Footer />
       <TodoItem />
       <TodoItem />
+      {jokeComponents}
+      {productComponents}
       <ContactCard
         contact={{
           name: "Mr.Whiskerson",
@@ -34,6 +50,8 @@ function App() {
           phone: "(46) 515-61482",
           email: "kitty@gmail.com"
         }}
+
+
       />
     </div>
   );
