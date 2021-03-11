@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from "./components/Header"
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
-import TodoItem from './components/TodoItem';
 import ContactCard from './components/ContactCard';
 import jokesData from "./components/jokesData"
 import Joke from "./components/Joke"
@@ -10,19 +9,23 @@ import "./App.css";
 
 import Product from "./components/Product"
 import productsList from "./components/productList"
+import todosData from "./componentsTodo/todosData"
+import TodoItem from './componentsTodo/TodoItem';
 
 function App() {
 
   const jokeComponents = jokesData.map(joke => {
     return (
-      <Joke 
-      question={joke.question} 
-      punchLine={joke.punchLine} 
+      <Joke
+        question={joke.question}
+        punchLine={joke.punchLine}
       />
     )
   })
 
-  const productComponents = productsList.map(item =>  <Product key={item.id} product={item} /> )
+  const productComponents = productsList.map(item => <Product key={item.id} product={item} />)
+
+  const todoItems = todosData.map(item => <TodoItem key={item.id} item={item} />)
 
   return (
 
@@ -30,10 +33,10 @@ function App() {
       <Header />
       <MainContent />
       <Footer />
-      <TodoItem />
-      <TodoItem />
+      {todoItems}
       {jokeComponents}
       {productComponents}
+
       <ContactCard
         contact={{
           name: "Mr.Whiskerson",
